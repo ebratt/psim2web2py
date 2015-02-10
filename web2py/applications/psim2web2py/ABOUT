@@ -1,0 +1,5 @@
+This application was created for a final project for CSC503 with Massimo DiPierro at DePaul University in Chicago,
+IL. It uses the psim module created by Massimo to demonstrate some cool features of simulating parallel algorithms
+emulated in a python class.
+
+Developed with web2py.

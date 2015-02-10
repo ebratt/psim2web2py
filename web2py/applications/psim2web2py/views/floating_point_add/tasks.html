@@ -1,0 +1,55 @@
+{{extend 'layout.html'}}
+
+<div id="worker_1" class="row section">
+    <div class="span12">
+        {{=MARKMIN(docs.floating_point_add)}}
+    </div>
+</div>
+<div class="row">
+    <div class="span12">
+        <p>
+            {{=A('1. Clear All', _class="btn clear_all", _href=URL('manage', 'clear_all'), _id="worker_1_clear")}}
+            {{=A('2. Start Monitoring', _class="btn monitoring disabled", _href=URL('monitor', 'get_status.load'), _id="worker_1_status")}}
+            {{=A('3. Queue Task', _class="btn primary autoremove disabled", _href=URL('manage', 'worker1'), _id="worker_1_queue")}}
+            {{=A('4. Stop Monitoring', _class="btn", _onclick="$('#worker_1_status_container').addClass('w2p_component_stop');return false;")}}
+            {{=A('5. Verify', _class="btn", callback=URL('verify', 'worker1'), target="worker_1_verify")}}
+        <p>
+        <div id="worker_1_status_container"></div>
+        <div id="worker_1_verify"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="span12">
+        {{=MARKMIN(comments.floating_point_add)}}
+    </div>
+</div>
+<hr />
+
+
+<script type="text/javascript">
+    $(function() {
+        $('pre').addClass("prettyprint");
+        prettyPrint();
+        $('a.autoremove').on('click', function(e) {
+            e.preventDefault();
+            if ($(this).hasClass('disabled')) return;
+            var url = $(this).attr('href');
+            web2py_ajax_page('GET', url,[],'aaa');
+        })
+        $('a.clear_all').on('click', function(e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            web2py_ajax_page('GET', url,[],$(this).attr('id') + 'a');
+        })
+        $('a.monitoring').on('click', function(e) {
+            e.preventDefault();
+            var el = $(this);
+            $('a.monitoring').addClass("stopped");
+            el.removeClass("stopped");
+            if (el.hasClass('disabled')) return;
+            el.addClass('disabled');
+            target = el.attr('id') + '_container'
+            web2py_component(el.attr('href'), target, timeout=2000, times=Infinity)
+        })
+    })
+</script>
