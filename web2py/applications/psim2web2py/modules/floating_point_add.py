@@ -143,6 +143,10 @@ def run_parallel(p):
 
 
 if __name__ == "__main__":
+
+    # TODO: need to read the number and the topology from the db
+    # TODO:  need to write the results back to the db
+
     private_folder = sys.argv[1]
     logfile = private_folder + 'floating_point_add_example.log'
     pngfilename = private_folder + 'floating_point_add_example.png'
@@ -177,3 +181,7 @@ if __name__ == "__main__":
 
 __author__ = 'Eric Bratt'
 __version__ = 'version 1.0'
+
+
+# use curl -X PUT -d Result=[1,2,3] --user eric_bratt@yahoo.com:pass http://127.0.0.1:8000/psim2web2py/default/api/Simulation?id=4
+# to updat the db
