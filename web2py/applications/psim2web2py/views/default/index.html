@@ -1,2 +1,11 @@
 {{extend 'layout.html'}}
-{{=message}}
+{{if logged_in:}}
+{{=H3(T('Here are your Simulations:'))}}
+{{=HR()}}
+{{=sample_1['scope']}}
+{{=BR()}}
+{{=HR()}}
+{{=sample_1['table']}}
+{{else:}}
+{{=H3(T('Please login to see your Simulations'))}}
+{{pass}}

@@ -85,7 +85,7 @@ def plot_results():
     plt.vlines(bases[0], -1, len(bases) + 0.5, linestyles='dashed')
     plt.grid()
     fig = plt.gcf()
-    fig.show()
+    # fig.show()
     fig.savefig(pngfilename)
 
 

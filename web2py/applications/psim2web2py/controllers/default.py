@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import os
+from plugin_tablescope import TableScope
+from plugin_solidtable import SOLIDTABLE, OrderbySelector
 
 
 def index():
@@ -10,9 +11,41 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    response.flash = T("Welcome to psim2web2py!")
-    message = "Hello and welcome to psim2web2py!"
-    return dict(message=message)
+    logged_in = auth.user or False
+
+    # build the SOLIDTABLE
+    orderby_selector = OrderbySelector([~db.Simulation.Date])
+    # dataset = db(db.Simulation.Owner==auth.user)
+    dataset = db((db.Simulation.id==db.Log.Simulation) & (db.Simulation.id==db.Plot.Simulation) & (db.Simulation.Owner == auth.user))
+    scope = TableScope(dataset, db.Simulation.Algorithm, renderstyle=True)
+    rows = scope.scoped_dataset.select(db.Simulation.Date,
+                                       db.Simulation.Algorithm,
+                                       db.Simulation.Input_Data,
+                                       db.Simulation.Result,
+                                       db.Log.Content,
+                                       db.Plot.Plot,
+                                       orderby=orderby_selector.orderby())
+    headers = {'Simulation.Date': {'selected': True},
+               'Simulation.Algorithm': {'selected': False},
+               'Simulation.Input_Data': {'selected': False},
+               'Simulation.Result': {'selected': False}
+    }
+    extracolumns = [{'label': A('Log', _href='#'),
+                     'content': lambda row, rc: A('Log', _href='download/%s' % row.Log.Content)},
+                    {'label': A('Plot', _href='#'),
+                     'content': lambda row, rc: A('Plot', _href='download/%s' % row.Plot.Plot)},
+                    ]
+    columns = [db.Simulation.Date,
+               db.Simulation.Algorithm,
+               db.Simulation.Input_Data,
+               db.Simulation.Result, extracolumns[0]]
+    table = SOLIDTABLE(rows,
+                       columns=columns,
+                       extracolumns=extracolumns,
+                       headers=headers,
+                       orderby=orderby_selector,
+                       renderstyle=True)
+    return dict(logged_in=logged_in, sample_1=dict(table=table, scope=scope))
 
 
 def user():

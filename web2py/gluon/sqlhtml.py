@@ -46,6 +46,8 @@ try:
 except ImportError:
     settings = {}
 
+# this line was removed on 4/23/14 and breaks plugin_solidtable
+table_field = re.compile('[\w_]+\.[\w_]+')
 widget_class = re.compile('^\w*')
 
 

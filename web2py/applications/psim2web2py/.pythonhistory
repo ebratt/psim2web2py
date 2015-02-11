@@ -1,0 +1,428 @@
+db(db.Algorithm.id>0)
+len(db(db.Algorithm.id>0))
+size(db(db.Algorithm.id>0))
+dir(size(db(db.Algorithm.id>0)))
+dir(db(db.Algorithm.id>0))
+db.Algorithm.isempty
+dir(db.Algorithm.isempty)
+dir(db.Algorithm)
+dir(db(db.Algorithm))
+db(db.Algorithm).isempty
+db(db.Algorithm).isempty()
+db.Algorithm.Name.contains('floating_point_add')
+db.Algorithm.Name.contains('floating_point_add').select(db.Algorithm.ALL)
+db.select(db.Algorithm.ALL)
+dir(db)
+dir(db.Algorithm.Name.contains('floating_point_add'))
+db(db.Algorithm.Name.contains('floating_point_add')).select(db.Algorithm.ALL)
+rows = db(db.Algorithm.Name.contains('floating_point_add')).select(db.Algorithm.ALL)
+rows
+for r in rows: print r
+db(db.Algorithm.Name.contains('floating_point_add')).delete()
+rows = db(db.Algorithm.Name.contains('floating_point_add')).select(db.Algorithm.ALL)
+for r in rows: print r
+rows = db(db.Algorithm.Name.contains('floating_point_add')).select(db.Algorithm.ALL)
+for r in rows: print r
+db(db.Algorithm.Name.contains('floating_point_add')).delete()
+rows = db(db.Algorithm.Name.contains('floating_point_add')).select(db.Algorithm.ALL)
+db(db.Algorithm.Name.contains('floating_point_add')).delete()
+rows = db(db.Algorithm.Name.contains('floating_point_add')).select(db.Algorithm.ALL)
+for r in rows: print r
+rows = db(db.Algorithm.Name.contains('floating_point_add')).select(db.Algorithm.ALL)
+for r in rows: print r
+db(db.Algorithm.Name.contains('floating_point_add')).delete()
+rows = db(db.Algorithm.Name.contains('floating_point_add')).select(db.Algorithm.ALL)
+for r in rows: print r
+db(db.Input_Data).select()
+for row in db(db.Input_Data).select(): print row
+for row in db(db.Input_Data).select(): print row.Value
+[chr(i) for i in xrange(10)]
+[chr(ord(i)) for i in xrange(10)]
+[chr(i) for i in xrange(10)]
+[unichr(i) for i in xrange(10)]
+[unichr(i) for i in xrange(97, 122)]
+[chr(i) for i in xrange(97, 122)]
+[chr(random.randint(i)) for i in xrange(97, 122)]
+[chr(i) for i in xrange(random.randint(97,122)]
+[chr(i) for i in xrange(random.randint(97,122))]
+[chr(i) for i in xrange(random.randrange(97,122))]
+random.randint(97,122)
+[chr(i) for i in random.randrange(97,122)]
+[chr(i) for i in list(random.randint(97,122))]
+range(random.randint(97,122))
+xrange(97,122)
+random.randint(97,122) for r in xrange(97,122)
+[random.randint(97,122) for r in xrange(97,122)]
+[chr(random.randint(97,122)) for r in xrange(97,122)]
+[chr(random.randint(97,122)) for r in xrange(0,36)]
+for row in db(db.Input_Data).select(): print row.Value
+db(db.Input_data).delete()
+db(db.Input_Data).delete()
+for row in db(db.Input_Data).select(): print row.Value
+chr(random.randint(97,122))
+db(db.Input_Data).delete()
+for row in db(db.Input_Data).select(): print row.Value
+db(db.Simulation).select()
+db.Simulation(4)
+put_set = db.Simulation(4)
+put_set
+put_set = db.Simulation(1)
+put_set
+put_set = db.Simulation(4)
+put_set
+db.Simulation(4)
+db.Simulation(4).update(Result='5')
+db.Simulation(4)
+db.commit()
+db.Simulation(4)
+db.Simulation(4).update(Result='5')
+db.Simulation(4)
+db.commit()
+db.Simulation(4)
+db.Simulation(4).update_record(Result='5')
+db.Simulation(4)
+import requests
+from requests.auth import HTTPBasicAuth
+import request
+import requests
+from requests.auth import HTTPBasicAuth
+payload = {'Value': '5'}
+auth=HTTPBasicAuth('eric_bratt@yahoo.com', 'pass')
+r = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth)
+requests.get("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json")
+g = requests.get("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json")
+g
+dir(requests.put)
+help(requests.put)
+r = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth)
+r
+payload
+payload={'Result': '5'}
+r = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth)
+r
+r = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth)
+r
+r = requests.patch("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth)
+r
+r = requests.get("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", auth=auth)
+r
+r = requests.get("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json")
+r
+r = requests.get("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json")
+r
+help(r)
+r.json
+print r
+print r.json
+print r.json()
+print r()
+dir(r)
+r.content
+r = requests.get("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", auth=auth)
+r.content
+print(r.url)
+r.text
+r.json()
+requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth, headers={'content-type':'text/plain'}))
+requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth, headers={'content-type':'text/plain'})
+auth
+print auth
+dir(auth)
+auth.username
+auth.password
+requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth, headers={'content-type':'text/plain'})
+requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth)
+payload
+r = requests.get("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", auth=auth)
+r
+r.json
+r.json()
+requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth)
+r.status_code
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth)
+put.status_code
+put.content
+payload={'Result': '5', 'email': 'eric_bratt@yahoo.com', 'pass': 'pass'}
+paylod
+payload
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload)
+put.content
+put.status_code
+r = requests.get("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", auth=auth)
+r.json()
+r.content()
+r.content
+payload
+payload={'Result': "5", 'email': 'eric_bratt@yahoo.com', 'pass': 'pass'}
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload)
+put.content
+put.status_code
+put.getresponse()
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=json.dumps(payload))
+import json
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=json.dumps(payload))
+put.content
+put.status_code
+payload
+payload={'user':'eric_bratt@yahoo.com','pass':'pass', 'Result':'5'}
+payload
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=json.dumps(payload))
+put.status_code
+put.content
+headers = {"content-type": "application/json", "Authorization": "<auth-key>" }
+url = "http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json"
+payload={'Result':'5'}
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth, headers=headers))
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, auth=auth, headers=headers)
+put.content
+auth
+data
+payload
+headers
+auth
+put = requests.put("http://127.0.0.1:8000/psim2web2py/default/api/Simulation/id/4.json", data=payload, headers=headers)
+put.statuscode
+put.content
+db(db.Simulation.id>0).delete()
+db.commit()
+db(db.Simulation.id>0).delete()
+db.commit()
+db(db.Algorithm).drop()
+db.Algorithm.drop()
+db.commit()
+db.Algorithm.drop()
+db.commit()
+dataset = db(db.Simulation.Owner==auth.user)
+from plugin_tablescope import TableScope
+from plugin_solidtable import SOLIDTABLE, OrderbySelector
+scope = TableScope(dataset, db.Simulation.Algorithm, renderstyle=True)
+rows = scope.scoped_dataset.select(join=[db.Log.on(db.Simulation.id==db.Log.id),
+                                             db.Plot.on(db.Simulation.id==db.Plot.id)],
+        # db.Simulation.Date,
+        # db.Simulation.Algorithm,
+        # db.Simulation.Input_Data,
+        # db.Simulation.Result,
+        # db.Log.Content,
+        # db.Plot.Plot,
+        orderby=orderby_selector.orderby())
+orderby_selector = OrderbySelector([~db.Simulation.id])
+rows = scope.scoped_dataset.select(join=[db.Log.on(db.Simulation.id==db.Log.id),
+                                             db.Plot.on(db.Simulation.id==db.Plot.id)],
+        # db.Simulation.Date,
+        # db.Simulation.Algorithm,
+        # db.Simulation.Input_Data,
+        # db.Simulation.Result,
+        # db.Log.Content,
+        # db.Plot.Plot,
+        orderby=orderby_selector.orderby())
+rows
+rows = scope.scoped_dataset.select(
+        join=[db.Log.on(db.Simulation.id==db.Log.Simulation),
+              db.Plot.on(db.Simulation.id==db.Plot.Simulation)],
+        orderby=orderby_selector.orderby())
+rows
+    rows = scope.scoped_dataset.select(
+        join=[db.Log.on(db.Simulation.id==db.Log.Simulation),
+              db.Plot.on(db.Simulation.id==db.Plot.Simulation)],
+        orderby=orderby_selector.orderby())
+rows = scope.scoped_dataset.select(
+        join=[db.Log.on(db.Simulation.id==db.Log.Simulation),
+              db.Plot.on(db.Simulation.id==db.Plot.Simulation)],
+        orderby=orderby_selector.orderby())
+rwos
+rows
+rows.content
+dir(rows)
+rows.json
+rows.render
+rows.json()
+dataset = db(db.Simulation.Owner==auth.user)
+rows = dataset.select(
+join=[db.Log.on(db.Simulation.id==db.Log.Simulation),
+              db.Plot.on(db.Simulation.id==db.Plot.Simulation)],
+        orderby=orderby_selector.orderby())
+rows
+dataset
+dir(rows)
+dir(dataset)
+dataset.select()
+dataset
+from plugin_tablescope import TableScope
+from plugin_solidtable import SOLIDTABLE, OrderbySelector
+orderby_selector = OrderbySelector([~db.Simulation.Date])
+from plugin_tablescope import TableScope
+from plugin_solidtable import SOLIDTABLE, OrderbySelector
+orderby_selector = OrderbySelector([~db.Simulation.Date])
+dataset = db(db.Simulation.id>0)
+scope = TableScope(dataset, db.Simulation.Algorithm, renderstyle=True)
+rows = scope.scoped_dataset.select(
+        join=[db.Log.on(db.Simulation.id==db.Log.Simulation),
+              db.Plot.on(db.Simulation.id==db.Plot.Simulation)],
+        orderby=orderby_selector.orderby())
+headers = {'Simulation.Date': {'selected': True},
+               'Simulation.Algorithm': {'selected': False},
+               'Simulation.Input_Data': {'selected': False},
+               'Simulation.Result': {'selected': False},
+               'Log.Content': {'selected': False},
+               'Plot.Plot': {'selected': False}
+    }
+headers
+headers.json
+for h in headers: print h
+headers = {'Simulation.Date': {'selected': True},
+               'Simulation.Algorithm': {'selected': False},
+               'Simulation.Input_Data': {'selected': False},
+               'Simulation.Result': {'selected': False}
+    }
+    headers += {'Log.Content': {'selected': False}}
+    headers += {'Plot.Plot': {'selected': False}}
+headers = {'Simulation.Date': {'selected': True},
+               'Simulation.Algorithm': {'selected': False},
+               'Simulation.Input_Data': {'selected': False},
+               'Simulation.Result': {'selected': False}
+    }
+headers
+headers += {'Log.Content': {'selected': False}}
+headers += 'Log.Content': {'selected': False}
+dir(headers)
+headers.as_list()
+help(headers)
+headers = {'Simulation.Date': {'selected': True},
+               'Simulation.Algorithm': {'selected': False},
+               'Simulation.Input_Data': {'selected': False},
+               'Simulation.Result': {'selected': False},
+               'Log.Content': {'selected': False},
+               'Plot.Plot': {'selected': False}
+    }
+headers
+columns = [db.Log.Content,
+               db.Plot.Plot,
+               db.Simulation.Date,
+               db.Simulation.Algorithm,
+               db.Simulation.Input_Data,
+               db.Simulation.Result]
+columns
+table = SOLIDTABLE(rows,
+                       columns=columns,
+                       headers=headers,
+                       orderby=orderby_selector,
+                       renderstyle=True)
+rows
+rows.json
+rows.json()
+rows()
+for row in rows: print row
+rows = scope.scoped_dataset.select(
+        join=[db.Log.on(db.Simulation.id==db.Log.Simulation).
+              db.Plot.on(db.Simulation.id==db.Plot.Simulation)],
+        orderby=orderby_selector.orderby())
+for row in rows: print row
+rows = scope.scoped_dataset.select(
+        join=[db.Log.on(db.Simulation.id==db.Log.Simulation)],
+        orderby=orderby_selector.orderby())
+for row in rows: print row
+rows.select(ALL)
+dataset = db(db.Simulation.id>0, db.Log, db.Plot)
+rows = scope.scoped_dataset.select(
+        join=[db.Log.on(db.Simulation.id==db.Log.Simulation),
+              db.Plot.on(db.Simulation.id==db.Plot.Simulation)],
+        orderby=orderby_selector.orderby(), 
+        projection=True)
+rows = scope.scoped_dataset.select(db.Simulation.Date, 
+                                       db.Simulation.Algorithm,
+                                       db.Simulation.Input_Data,
+                                       db.Simulation.Result,
+                                       db.Log.Content,
+                                       left=db.Simulation.on(db.Simulation.id==db.Log.Simulation))
+for row in rows: print row
+rows = scope.scoped_dataset.select(db.Simulation.Date,
+                                       db.Simulation.Algorithm,
+                                       db.Simulation.Input_Data,
+                                       db.Simulation.Result,
+                                       db.Log.Content,
+                                       join=[db.Simulation.on(db.Simulation.id==db.Log.Simulation).
+                                       db.Simulation.on(db.Simulation.id==db.Plot.Simulation)])
+for row in rows: print row
+rows = scope.scoped_dataset.select(db.Simulation.Date,
+                                       db.Simulation.Algorithm,
+                                       db.Simulation.Input_Data,
+                                       db.Simulation.Result,
+                                       db.Log.Content,
+                                       db.Plot.Plot,
+                                       join=[db.Simulation.on(db.Simulation.id==db.Log.Simulation).
+                                       db.Simulation.on(db.Simulation.id==db.Plot.Simulation)])
+for row in rows: print row
+rows = scope.scoped_dataset.select(db.Simulation.Date,
+                                       db.Simulation.Algorithm,
+                                       db.Simulation.Input_Data,
+                                       db.Simulation.Result,
+                                       db.Log.Content,
+                                       db.Plot.Plot,
+                                       join=[db.Simulation.on(db.Simulation.id==db.Log.Simulation).
+                                             db.Simulation.on(db.Simulation.id==db.Plot.Simulation)],
+                                       orderby=orderby_selector.orderby())
+for row in rows: print row
+headers = {'Simulation.Date': {'selected': True},
+               'Simulation.Algorithm': {'selected': False},
+               'Simulation.Input_Data': {'selected': False},
+               'Simulation.Result': {'selected': False},
+               'Log.Content': {'selected': False},
+               'Plot.Plot': {'selected': False}
+    }
+columns = [db.Simulation.Date,
+               db.Simulation.Algorithm,
+               db.Simulation.Input_Data,
+               db.Simulation.Result,
+               db.Log.Content,
+               db.Plot.Plot]
+table = SOLIDTABLE(rows,
+                       columns=columns,
+                       headers=headers,
+                       orderby=orderby_selector,
+                       renderstyle=True)
+table
+columns = [db.Simulation.Date,
+               db.Simulation.Algorithm,
+               db.Simulation.Input_Data,
+               db.Simulation.Result]
+    extracolumns = [{'label': A('Edit', _href='#'),
+                     'content': lambda row, rc: A('Edit', _href='edit/%s' % row.Simulation.id)},
+                    {'label': A('Edit', _href='#'),
+                     'content': lambda row, rc: A('Edit', _href='edit/%s' % row.Simulation.id)},
+                    ]
+    columns = [columns, extracolumns[0]]
+columns = [db.Simulation.Date,
+               db.Simulation.Algorithm,
+               db.Simulation.Input_Data,
+               db.Simulation.Result]
+extracolumns = [{'label': A('Edit', _href='#'),
+                     'content': lambda row, rc: A('Edit', _href='edit/%s' % row.Simulation.id)},
+                    {'label': A('Edit', _href='#'),
+                     'content': lambda row, rc: A('Edit', _href='edit/%s' % row.Simulation.id)},
+                    ]
+columns = [columns, extracolumns[0]]
+table = SOLIDTABLE(rows,
+                       columns=columns,
+                       headers=headers,
+                       orderby=orderby_selector,
+                       renderstyle=True)
+table = SOLIDTABLE(rows,
+                       columns=columns,
+                       extracolumns=extracolumns,
+                       headers=headers,
+                       orderby=orderby_selector,
+                       renderstyle=True)
+extracolumns = [{'label': A('Edit', _href='#'),
+                     'content': lambda row, rc: A('Edit', _href='edit/%s' % row.Log.Content)},
+                    {'label': A('Edit', _href='#'),
+                     'content': lambda row, rc: A('Edit', _href='edit/%s' % row.Plot.Plot)},
+                    ]
+columns = [columns, extracolumns[0]]
+columns
+for c in columns: print c
+table = SOLIDTABLE(rows,
+                       columns=columns,
+                       extracolumns=extracolumns,
+                       headers=headers,
+                       orderby=orderby_selector,
+                       renderstyle=True)
